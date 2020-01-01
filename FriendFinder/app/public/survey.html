@@ -14,13 +14,14 @@
 
         <!-- Chosen -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+        <link rel="stylesheet" href="./style/style.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 
     </head>
 
     <body>
 
-        <div class="container">
+        <div class="container" id="container" style="display: block;">
 
             <h2>Survey Questions</h2>
             <hr>
@@ -159,20 +160,38 @@
                 Submit</button>
 
             <hr>
+
             <footer class="footer">
                 <div class="container">
-                    <p><a href="/api/friends">API Friends List</a> | <a
+                    <p><a href="../data/friends.js">API Friends List</a> | <a
                             href="https://hatout1.github.io/Node_Express_Servers/">GitHub Repo</a></p>
                 </div>
             </footer>
+        </div>
+        <div class="container" id="resultDisplay" style="display: none;">
+            <div id="resultsModal" class="modalfade">
+                <h2 class="modal-title"><strong>Best Match</strong></h2>
+            </div>
 
+            <div class="photo" style="height: 400px;">
+                <h2 id="matchName"></h2>
+                <img id="matchImg" src="" alt="Placeholder image in case user pic doesn't show" />
+
+                <div class="modalfooter">
+                    <button type="button" class="btn btn-default" id="closeBtn">Close</button>
+                </div>
+            </div>
         </div>
 
-
-        <!-- Json link -->
         <script src="https://use.fontawesome.com/1b706d925a.js"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
         <!-- Local JavaScript link -->
         <script src="app.js"></script>
 
